@@ -24,6 +24,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\examples\data\calibrated_constrained_ensemble\max_forcing_Rcimp.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\examples\data\calibrated_constrained_ensemble\max_forcing_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\examples\data\calibrated_constrained_ensemble\species_configs_properties_calibration1.4.1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\examples\data\calibrated_constrained_ensemble\volcanic_solar.csv">
           <value>
             <Attribute>
