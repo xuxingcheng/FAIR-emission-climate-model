@@ -1,1 +1,3 @@
-# FAIR-emission-climate-model-
+# FAIR-emission-climate-model
+
+Investigating effect of different emissions on global temperature change
