@@ -31,6 +31,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\examples\data\calibrated_constrained_ensemble\max_forcing_cali.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\examples\data\calibrated_constrained_ensemble\max_forcing_data.csv">
           <value>
             <Attribute>
