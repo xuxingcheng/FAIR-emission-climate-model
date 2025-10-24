@@ -1,0 +1,56 @@
+Input Notebook:  /glade/u/home/stevenxu/FAIRproject/ARIMA/Model_fitting_test.ipynb
+Output Notebook: /glade/u/home/stevenxu/FAIRproject/ARIMA/Model_fitting_test_result.ipynb
+Executing:   0%|          | 0/15 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   7%|▋         | 1/15 [00:35<08:19, 35.68s/cell]Executing:  20%|██        | 3/15 [00:40<02:11, 10.94s/cell]Executing:  27%|██▋       | 4/15 [00:41<01:21,  7.43s/cell]Executing:  33%|███▎      | 5/15 [00:45<01:03,  6.36s/cell]Executing:  40%|████      | 6/15 [00:45<00:39,  4.36s/cell]Executing:  47%|████▋     | 7/15 [00:45<00:24,  3.08s/cell]Executing:  60%|██████    | 9/15 [00:50<00:16,  2.81s/cell]Executing:  60%|██████    | 9/15 [00:53<00:35,  6.00s/cell]
+Traceback (most recent call last):
+  File "/glade/work/stevenxu/conda-envs/amoc-env/bin/papermill", line 10, in <module>
+    sys.exit(papermill())
+             ^^^^^^^^^^^
+  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/papermill/cli.py", line 235, in papermill
+    execute_notebook(
+  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [7]":
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[7], line 25
+     23 f.define_species(species, properties)
+     24 f.allocate()
+---> 25 f.fill_from_csv(
+     26     emissions_file="/glade/u/home/stevenxu/FAIRproject/examples/data/calibrated_constrained_ensemble/extensions_1750-2500_with_arima.csv",
+     27     forcing_file='/glade/u/home/stevenxu/FAIRproject/examples/data/calibrated_constrained_ensemble/volcanic_solar.csv',
+     28 )
+
+File /glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/fair/io/fill_from.py:207, in fill_from_csv(self, emissions_file, concentration_file, forcing_file)
+    204 data = interpolator(mode_options[mode]["time"])
+    206 # Parse and possibly convert unit in input to what FaIR wants
+--> 207 unit = df.loc[
+    208     (df["scenario"] == scenario)
+    209     & (df["variable"] == specie)
+    210     & (df["region"].str.lower() == "world"),
+    211     "unit",
+    212 ].values[0]
+    213 is_ghg = self.properties_df.loc[specie, "greenhouse_gas"]
+    214 if mode == "emissions":
+
+IndexError: index 0 is out of bounds for axis 0 with size 0
+
