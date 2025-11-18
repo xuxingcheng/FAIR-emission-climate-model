@@ -1,43 +1,0 @@
-Input Notebook:  /glade/u/home/stevenxu/FAIRproject/ARIMA/Model_fitting_test.ipynb
-Output Notebook: /glade/u/home/stevenxu/FAIRproject/ARIMA/Model_fitting_test_result.ipynb
-Executing:   0%|          | 0/20 [00:00<?, ?cell/s]Executing notebook with kernel: python3
-Executing:   5%|▌         | 1/20 [00:45<14:25, 45.53s/cell]Executing:  15%|█▌        | 3/20 [00:49<03:46, 13.30s/cell]Executing:  20%|██        | 4/20 [00:50<02:22,  8.93s/cell]Executing:  25%|██▌       | 5/20 [00:56<02:01,  8.08s/cell]Executing:  30%|███       | 6/20 [00:56<01:17,  5.53s/cell]Executing:  35%|███▌      | 7/20 [00:56<00:50,  3.87s/cell]Executing:  45%|████▌     | 9/20 [00:59<00:27,  2.53s/cell]Executing:  50%|█████     | 10/20 [01:00<00:22,  2.24s/cell]Executing:  55%|█████▌    | 11/20 [01:02<00:19,  2.16s/cell]Executing:  60%|██████    | 12/20 [01:08<00:25,  3.16s/cell]Executing:  70%|███████   | 14/20 [01:46<01:01, 10.27s/cell]Executing:  75%|███████▌  | 15/20 [01:51<00:44,  8.87s/cell]Executing:  90%|█████████ | 18/20 [01:52<00:09,  4.63s/cell]Executing:  90%|█████████ | 18/20 [01:55<00:12,  6.41s/cell]
-Traceback (most recent call last):
-  File "/glade/work/stevenxu/conda-envs/amoc-env/bin/papermill", line 10, in <module>
-    sys.exit(papermill())
-             ^^^^^^^^^^^
-  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
-    return self.main(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/core.py", line 1078, in main
-    rv = self.invoke(ctx)
-         ^^^^^^^^^^^^^^^^
-  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/core.py", line 783, in invoke
-    return __callback(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/click/decorators.py", line 33, in new_func
-    return f(get_current_context(), *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/papermill/cli.py", line 235, in papermill
-    execute_notebook(
-  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/papermill/execute.py", line 131, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/glade/work/stevenxu/conda-envs/amoc-env/lib/python3.11/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [15]":
----------------------------------------------------------------------------
-KeyError                                  Traceback (most recent call last)
-Cell In[15], line 54
-     52     ax[i // 4, i % 4].set_ylim(-1, 10)
-     53     ax[i // 4, i % 4].axhline(0, color="k", ls=":", lw=0.5)
----> 54     ax[i // 4, i % 4].set_title(fancy_titles[scenarios[i]])
-     56 pl.suptitle("Temperature anomalies")
-     57 fig.tight_layout()
-
-KeyError: 'high-overshoot'
-
