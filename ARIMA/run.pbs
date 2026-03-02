@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #PBS -N Fgen_ACCESS_Calculation
 #PBS -A UWAS0157
-#PBS -l walltime=00:10:00
-#PBS -q casper@casper-pbs
+#PBS -l walltime=00:20:00
+#PBS -q develop@desched1
 #PBS -j oe
 #PBS -k eod
 #PBS -m abe
